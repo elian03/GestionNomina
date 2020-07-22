@@ -1,0 +1,84 @@
+<header id="header" style="margin-left:2em; padding:1.2em;"><!--header-->
+    <img src="../assets/images/logo.png" width="70px" style="float:left; "/>
+      
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="mainmenu pull-left">
+                    <ul class="nav navbar-nav collapse navbar-collapse" style="margin-left:1.5em; margin-top:1.5em;">
+                        <li><a [routerLink]="['/index']" class="active">Inicio</a></li>
+                        <li class="dropdown"><a >Productos<i class="fa fa-angle-down"></i></a>
+                            <ul role="menu" class="sub-menu">
+                                <li><a [routerLink]="['/entry']">Entrada</a></li> 
+                                <li><a [routerLink]="['/output']">Salida</a></li> 
+                            </ul>
+                        </li> 
+                        <li><a [routerLink]="['/transfers']">Transacciones</a></li>
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div><!--/header-bottom-->
+</header><!--/header-->
+<div style="height: 2px;
+border: 0;
+background-color: #ef5734;" ></div>
+<!--The content below is only a placeholder and can be replaced.-->
+<section style="margin:2em;">
+    <router-outlet></router-outlet>
+</section>
+
+<footer id="footer"><!--Footer-->
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Servicio</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Contactanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Compra rapida</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Frutas</a></li>
+                            <li><a href="#">Carnes</a></li>
+                            <li><a href="#">Vegetales</a></li>
+                            <li><a href="#">Productos lacteos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Politicas</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Terminos de uso</a></li>
+                            <li><a href="#">Politicas de privacidad</a></li>
+                            <li><a href="#">Politicas de reembolso</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Acerca del WEBMARKET ABC</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Informacion</a></li>
+                            <li><a href="#">Ubicacions</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>	
+</footer><!--/Footer-->
+
+

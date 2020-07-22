@@ -1,0 +1,43 @@
+<div id="contact-page" class="container">
+  <div class="bg">
+      <div class="row">    		
+          <div class="col-sm-12">    			   			
+              <h2 class="title text-center">Productos</h2>    			    				    				
+          </div>			 		
+      </div>    	
+      <div class="row">  	
+          <div class="col-sm-12">
+              <div class="contact-form">
+                  <h2 class="title text-center">Salida de productos</h2>
+                  <div class="status alert alert-success" style="display: none"></div>
+                  <form [formGroup]="outputProductsForm"  (ngSubmit)="outputProducts()" id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+                      <div class="form-group col-md-6">
+                          <select formControlName="select" (change)="selectChanged()" name="productName" required="required" class="form-control">
+                              <option selected value="0">Seleccione el producto</option>
+                              <option *ngFor="let product of products" value="{{product.id}}">{{product.productName}}</option>
+                          </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <input type="text" name="clientIdentification" class="form-control" required="required" placeholder="Identificacion del cliente">
+                      </div>
+                      <div class="form-group col-md-4">
+                          <input formControlName="unityPrice" type="text" readonly name="unityPrice"  class="form-control" required="required" value="{{unityPrice}}">
+                      </div>
+                      <div class="form-group col-md-4">
+                          <input formControlName="salePrice" type="text" readonly name="price"  class="form-control" required="required" value="{{totalPrice}}">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input formControlName="quantity" (change)="selectChanged()" type="number" name="quantity" max="100" class="form-control" required="required" placeholder="Cantidad">
+                    </div>
+                      <div class="form-group col-md-12">
+                          <input type="submit" name="submit" class="btn btn-primary pull-right" value="ACEPTAR">
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <div class="col-sm-4">
+
+          </div>    			
+      </div>  
+  </div>	
+</div>

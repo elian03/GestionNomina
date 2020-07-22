@@ -1,0 +1,52 @@
+<div id="contact-page" class="container">
+    <div class="bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title text-center">Inicio</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-form">
+                    <h2 class="title text-center">Listado de productos</h2>
+                    <a style="float:right;" class="btn btn-default" [routerLink]="['/createProduct']">
+                        <span class="ti-plus"></span> Agregar producto
+                    </a>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad almacenada</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let product of products">
+                                <tr>
+                                    <td>{{product.productName}}</td>
+                                    <td>{{product.description}}</td>
+                                    <td>{{product.salePrice}}</td>
+                                    <td>{{product.quantityStoraged}}</td>
+                                    <td>
+                                        <a class="btn btn-default btn-sm"  [routerLink]="['/updateProduct', product.id]">
+                                            <i class="ti-pencil" style="color:green;"></i>
+                                        </a>
+                                        <a class="btn btn-default btn-sm" (click)='deletePlate(product.id)'>
+                                            <i class="ti-trash" style="color:darkred"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--/#contact-page-->
