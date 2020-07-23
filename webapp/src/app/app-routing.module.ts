@@ -10,6 +10,8 @@ import { NgModule } from "@angular/core";
 import { EmpleadoIndexComponent } from "./empleados/index/empleado-index.component";
 import { EmpleadoCreateComponent } from "./empleados/create/empleado-create.component";
 import { EmpleadoUpdateComponent } from "./empleados/update/empleado-update.component";
+import { TipoDeduccionIndexComponent } from "./tipo-deduccion/index/tipo-deduccion-index.component";
+import { TipoDeduccionCreateComponent } from "./tipo-deduccion/create/tipo-deduccion-create.component";
 
 export const AppRoutes: Routes = [
   {
@@ -30,24 +32,26 @@ export const AppRoutes: Routes = [
         component: EmpleadoCreateComponent,
       },
       {
-        path: "update/:id",
+        path: "edit/:id",
         component: EmpleadoUpdateComponent,
       },
+    ],
+  },
+  {
+    path: "tipo-deduccion",
+    component: LayoutComponent,
+    children: [
+      {
+        path: "index",
+        component: TipoDeduccionIndexComponent,
+      },
+      {
+        path: "create",
+        component: TipoDeduccionCreateComponent,
+      },
       // {
-      //   path: "entry",
-      //   component: EntryComponent,
-      // },
-      // {
-      //   path: "output",
-      //   component: OutputComponent,
-      // },
-      // {
-      //   path: "transfer-detail/:id",
-      //   component: TransferDetailComponent,
-      // },
-      // {
-      //   path: "transfers",
-      //   component: TransferListComponent,
+      //   path: "edit/:id",
+      //   component: EmpleadoUpdateComponent,
       // },
     ],
   },

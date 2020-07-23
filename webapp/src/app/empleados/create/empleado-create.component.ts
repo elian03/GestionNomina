@@ -32,10 +32,10 @@ export class EmpleadoCreateComponent {
       toastr.error('Nombre es requerido')
     }
 
-    if (Number(this.record.salarioMensual) >= 0) {
-      valid = false;
-      toastr.error('Cedula no valida');
-    }
+    // if (Number(this.record.salarioMensual) >= 0) {
+    //   valid = false;
+    //   toastr.error('Salario no valido');
+    // }
 
     if (valid) {
       this.empleadoService.create(this.record).then(() => {

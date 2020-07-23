@@ -10,6 +10,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { AppRoutingModule, AppRoutes } from './app-routing.module';
 import { EmpleadosModule } from './empleados/empleados.module';
 import { EmpleadoService } from './services/empleado.service';
+import { TipoDeduccionModule } from './tipo-deduccion/tipo-deduccion.module';
 // import { IndexModule } from './index/index.module';
 // import { ProductModule } from './product/product.module';
 // import { ProductService } from './services/product.service';
@@ -29,6 +30,7 @@ import { EmpleadoService } from './services/empleado.service';
     // BrowserAnimationsModule,
     // ToastrModule.forRoot(),
     EmpleadosModule,
+    TipoDeduccionModule,
     // IndexModule,
     // ProductModule,
     // TransferModule,

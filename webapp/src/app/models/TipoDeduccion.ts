@@ -6,7 +6,7 @@
  */
 export class TipoDeduccion {
   id: number;
-  Nombre: string;
-  DependeSalario: string;
-  Estado: String;
+  nombre: string;
+  dependeSalario: string;
+  estado: string;
 }
