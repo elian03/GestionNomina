@@ -13,6 +13,9 @@ import { EmpleadoUpdateComponent } from "./empleados/update/empleado-update.comp
 import { TipoDeduccionIndexComponent } from "./tipo-deduccion/index/tipo-deduccion-index.component";
 import { TipoDeduccionCreateComponent } from "./tipo-deduccion/create/tipo-deduccion-create.component";
 import { TipoDeduccionUpdateComponent } from "./tipo-deduccion/update/tipo-deduccion-update.component";
+import { TipoIngresoIndexComponent } from "./tipo-ingreso/index/tipo-ingreso-index.component.ts";
+import { TipoIngresoCreateComponent } from "./tipo-ingreso/create/tipo-ingreso-create.component.ts";
+import { TipoIngresoUpdateComponent } from "./tipo-ingreso/update/tipo-ingreso-update.component.ts";
 
 export const AppRoutes: Routes = [
   {
@@ -62,15 +65,15 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: "index",
-        component: TipoDeduccionIndexComponent,
+        component: TipoIngresoIndexComponent,
       },
       {
         path: "create",
-        component: TipoDeduccionCreateComponent,
+        component: TipoIngresoCreateComponent,
       },
       {
         path: "edit/:id",
-        component: TipoDeduccionUpdateComponent,
+        component: TipoIngresoUpdateComponent,
       },
     ],
   },
