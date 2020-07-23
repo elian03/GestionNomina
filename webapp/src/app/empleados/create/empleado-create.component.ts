@@ -21,18 +21,18 @@ export class EmpleadoCreateComponent {
   save() {
     let valid = true;
 
-    const isAnIde = Validator.isAnIde(this.record.Cedula);
+    const isAnIde = Validator.isAnIde(this.record.cedula);
     if (!isAnIde) {
       valid = false;
       toastr.error('Cedula no valida')
     }
 
-    if (!this.record.Nombre) {
+    if (!this.record.nombre) {
       valid = false;
       toastr.error('Nombre es requerido')
     }
 
-    if (Number(this.record.SalarioMensual) >= 0) {
+    if (Number(this.record.salarioMensual) >= 0) {
       valid = false;
       toastr.error('Cedula no valida');
     }
