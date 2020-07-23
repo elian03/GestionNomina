@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Empleado } from '../models/Empleado';
 
+const baseUrl = 'http://localhost:8080/api/employee';
+
 @Injectable()
 export class EmpleadoService {
 
   constructor(private http: HttpClient) { }
 
   getAll(): Promise<Array<Empleado>> {
-    return this.http.get('/api/empleados')
+    return this.http.get(`${baseUrl}`)
       .toPromise()
       .then(res => {
         console.log(res);
@@ -17,7 +19,7 @@ export class EmpleadoService {
   }
 
   getById(id: string): Promise<Empleado> {
-    return this.http.get('/api/empleados/' + id)
+    return this.http.get(`${baseUrl}/` + id)
       .toPromise()
       .then(res => {
         console.log(res);
@@ -26,7 +28,7 @@ export class EmpleadoService {
   }
 
   create(resource: Empleado): Promise<boolean> {
-    return this.http.post('/api/empleados/create', resource)
+    return this.http.post(`${baseUrl}/create`, resource)
       .toPromise()
       .then(res => {
         return res as boolean;
@@ -34,7 +36,7 @@ export class EmpleadoService {
   }
 
   edit(resource: Empleado): Promise<boolean> {
-    return this.http.put('/api/empleados/update', resource)
+    return this.http.put(`${baseUrl}/update`, resource)
       .toPromise()
       .then(res => {
         return res as boolean;
