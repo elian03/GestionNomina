@@ -8,41 +8,42 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="contact-form">
-          <h2 class="title text-center">Listado de productos</h2>
+          <h2 class="title text-center">Listado de empleados</h2>
           <a
             style="float: right;"
             class="btn btn-default"
-            [routerLink]="['/createProduct']"
+            [routerLink]="['/createEmpleado']"
           >
-            <span class="ti-plus"></span> Agregar producto
+            <span class="ti-plus"></span> Agregar empleado
           </a>
           <div class="content table-responsive table-full-width">
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th>Nombre</th>
-                  <th>Descripción</th>
-                  <th>Precio</th>
-                  <th>Cantidad almacenada</th>
-                  <th>Opciones</th>
+                  <th>Cedula</th>
+                  <th>Departamento</th>
+                  <th>Puesto</th>
+                  <th>Salario mensual</th>
                 </tr>
               </thead>
-              <tbody *ngFor="let product of products">
+              <tbody *ngFor="let empleado of empleados">
                 <tr>
-                  <td>{{ product.productName }}</td>
-                  <td>{{ product.description }}</td>
-                  <td>{{ product.salePrice }}</td>
-                  <td>{{ product.quantityStoraged }}</td>
+                  <td>{{ product.Nombre }}</td>
+                  <td>{{ product.Cedula }}</td>
+                  <td>{{ product.Departamento }}</td>
+                  <td>{{ product.Puesto }}</td>
+                  <td>{{ product.SalarioMensual }}</td>
                   <td>
                     <a
                       class="btn btn-default btn-sm"
-                      [routerLink]="['/updateProduct', product.id]"
+                      [routerLink]="['/updateEmpleado', empleado.id]"
                     >
                       <i class="ti-pencil" style="color: green;"></i>
                     </a>
                     <a
                       class="btn btn-default btn-sm"
-                      (click)="deletePlate(product.id)"
+                      (click)="deleteEmpleado(empleado.id)"
                     >
                       <i class="ti-trash" style="color: darkred;"></i>
                     </a>

@@ -3,8 +3,9 @@ import {CommonModule} from '@angular/common';
 import {CarouselModule} from 'primeng/carousel';
 import {DataListModule} from 'primeng/datalist';
 
-import {IndexComponent} from './index/index.component';
-import { IndexRoutingModule } from './index-routing.module';
+import { EmpleadoIndexComponent} from './index/empleado-index.component';
+import { EmpleadosRoutingModule } from './empleados-routing.module';
+import { EmpleadoService } from '../services/empleado.service';
 
 /**
  * Represents the Index module configuration
@@ -15,12 +16,13 @@ import { IndexRoutingModule } from './index-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    IndexRoutingModule,
+    EmpleadosRoutingModule,
     CarouselModule,
     DataListModule
   ],
-  declarations: [IndexComponent]
+  declarations: [EmpleadoIndexComponent],
+  providers: [ EmpleadoService,],
 })
 
-export class IndexModule {
+export class EmpleadosModule {
 }

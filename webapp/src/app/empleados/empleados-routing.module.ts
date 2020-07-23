@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IndexComponent } from './index/index.component';
+import { EmpleadoIndexComponent } from './index/empleado-index.component';
 
 const AppRoutes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: EmpleadoIndexComponent
   }
 ];
 
@@ -13,11 +13,10 @@ const AppRoutes: Routes = [
  * Responsible of managing dashboard routing.
  *
  * @export
- * @class DashboardRoutingModule
+ * @class EmpleadosRoutingModule
  */
 @NgModule({
   imports: [RouterModule.forChild(AppRoutes)],
   exports: [RouterModule]
 })
-
-export class IndexRoutingModule { }
+export class EmpleadosRoutingModule { }

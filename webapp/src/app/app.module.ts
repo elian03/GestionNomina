@@ -6,11 +6,12 @@ import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AppRoutingModule, AppRoutes } from './app-routing.module';
-import { IndexModule } from './index/index.module';
-import { ProductModule } from './product/product.module';
-import { ProductService } from './services/product.service';
-import { TransferModule } from './transfer/transfer.module';
-import { TransferService } from './services/transfer.service';
+import { EmpleadosModule } from './empleados/empleados.module';
+// import { IndexModule } from './index/index.module';
+// import { ProductModule } from './product/product.module';
+// import { ProductService } from './services/product.service';
+// import { TransferModule } from './transfer/transfer.module';
+// import { TransferService } from './services/transfer.service';
 
 
 @NgModule({
@@ -22,12 +23,13 @@ import { TransferService } from './services/transfer.service';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    IndexModule,
-    ProductModule,
-    TransferModule,
+    EmpleadosModule,
+    // IndexModule,
+    // ProductModule,
+    // TransferModule,
     HttpClientModule
   ],
-  providers: [ProductService, HttpClient, TransferService],
+  providers: [ HttpClient,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
