@@ -1,0 +1,46 @@
+<div id="contact-page" class="container">
+  <div class="bg">
+      <div class="row">    		
+          <div class="col-sm-12">    			   			
+              <h2 class="title text-center">Productos</h2>    			    				    				
+          </div>			 		
+      </div>    	
+      <div class="row">  	
+          <div class="col-sm-12">
+              <div class="contact-form">
+                  <h2 class="title text-center">Creacion de un producto</h2>
+                  <div class="status alert alert-success" style="display: none"></div>
+                  <form  class="contact-form row" name="contact-form" method="POST" action="/Process">
+                      <div class="form-group col-md-6">
+                          <input type="text" name="productName" class="form-control" required="required" placeholder="Nombre del Producto">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <select name="productType" required="required" class="form-control">
+                              <option selected value="0">Seleccione un tipo de producto</option>
+                              <option value="1">Lacteos</option>
+                              <option value="1">Carnes</option>
+                              <option value="1">Hogar</option>
+                          </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <input type="text" name="PurchasePrice" class="form-control"  placeholder="Precio de compra">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <input type="text" name="SalePrice" class="form-control"  placeholder="Precio de venta">
+                      </div>
+                      <div class="form-group col-md-12">
+                          <input type="number" name="initialQuantity" class="form-control"  placeholder="Cantidad de entrada inicial">
+                      </div>
+                      <div class="form-group col-md-12">
+                          <textarea name="description" id="description" class="form-control" rows="8" placeholder="Descripcion del producto"></textarea>
+                      </div>                        
+                          <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+                  </form>
+              </div>
+          </div>
+          <div class="col-sm-4">
+
+          </div>    			
+      </div>  
+  </div>	
+</div>
