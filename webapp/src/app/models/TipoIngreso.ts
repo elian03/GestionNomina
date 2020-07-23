@@ -6,7 +6,7 @@
  */
 export class TipoIngreso {
   id: number;
-  Nombre: string;
-  DependeSalario: string;
-  Estado: string;
+  nombre: string;
+  dependeSalario: string;
+  estado: string;
 }

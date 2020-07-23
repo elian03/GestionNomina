@@ -11,6 +11,7 @@ import { AppRoutingModule, AppRoutes } from './app-routing.module';
 import { EmpleadosModule } from './empleados/empleados.module';
 import { EmpleadoService } from './services/empleado.service';
 import { TipoDeduccionModule } from './tipo-deduccion/tipo-deduccion.module';
+import { TipoIngresoModule } from './tipo-ingreso/tipo-ingreso.module';
 // import { IndexModule } from './index/index.module';
 // import { ProductModule } from './product/product.module';
 // import { ProductService } from './services/product.service';
@@ -31,6 +32,7 @@ import { TipoDeduccionModule } from './tipo-deduccion/tipo-deduccion.module';
     // ToastrModule.forRoot(),
     EmpleadosModule,
     TipoDeduccionModule,
+    TipoIngresoModule,
     // IndexModule,
     // ProductModule,
     // TransferModule,
