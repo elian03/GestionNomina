@@ -15,7 +15,7 @@ export class EmpleadoCreateComponent {
   record: Empleado = new Empleado();
 
   constructor(
-    empleadoService: EmpleadoService
+    private empleadoService: EmpleadoService
   ) { }
 
   save() {

@@ -16,7 +16,7 @@ export class EmpleadoUpdateComponent {
   record: Empleado = new Empleado();
 
   constructor(
-    empleadoService: EmpleadoService,
+    private empleadoService: EmpleadoService,
     private router: Router,
     private route: ActivatedRoute,
   ) {

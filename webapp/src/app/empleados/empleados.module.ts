@@ -8,6 +8,7 @@ import { EmpleadoIndexComponent} from './index/empleado-index.component';
 import { EmpleadosRoutingModule } from './empleados-routing.module';
 import { EmpleadoService } from '../services/empleado.service';
 import { EmpleadoCreateComponent } from './create/empleado-create.component';
+import { EmpleadoUpdateComponent } from './update/empleado-update.component';
 
 /**
  * Represents the Index module configuration
@@ -23,7 +24,7 @@ import { EmpleadoCreateComponent } from './create/empleado-create.component';
     CarouselModule,
     DataListModule
   ],
-  declarations: [EmpleadoIndexComponent, EmpleadoCreateComponent],
+  declarations: [EmpleadoIndexComponent, EmpleadoCreateComponent, EmpleadoUpdateComponent],
   providers: [ EmpleadoService,],
 })
 

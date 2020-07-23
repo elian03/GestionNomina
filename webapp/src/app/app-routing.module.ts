@@ -9,6 +9,7 @@ import { NgModule } from "@angular/core";
 // import { TransferListComponent } from "./transfer/transfer-list/transfer-list.component";
 import { EmpleadoIndexComponent } from "./empleados/index/empleado-index.component";
 import { EmpleadoCreateComponent } from "./empleados/create/empleado-create.component";
+import { EmpleadoUpdateComponent } from "./empleados/update/empleado-update.component";
 
 export const AppRoutes: Routes = [
   {
@@ -28,10 +29,10 @@ export const AppRoutes: Routes = [
         path: "create",
         component: EmpleadoCreateComponent,
       },
-      // {
-      //   path: "updateProduct/:id",
-      //   component: UpdateComponent,
-      // },
+      {
+        path: "update/:id",
+        component: EmpleadoUpdateComponent,
+      },
       // {
       //   path: "entry",
       //   component: EntryComponent,
