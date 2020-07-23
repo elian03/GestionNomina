@@ -2,6 +2,7 @@ import { Component, } from '@angular/core';
 import { Empleado } from '../../models/Empleado';
 import { Validator } from 'utils-do';
 import { EmpleadoService } from '../../services/empleado.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 declare const toastr;
 
@@ -15,8 +16,15 @@ export class EmpleadoUpdateComponent {
   record: Empleado = new Empleado();
 
   constructor(
-    empleadoService: EmpleadoService
-  ) { }
+    empleadoService: EmpleadoService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.empleadoService.getById(id).then((data) => {
+      this.record = data;
+    })
+  }
 
   save() {
     let valid = true;
