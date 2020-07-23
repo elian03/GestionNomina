@@ -1,0 +1,82 @@
+<div id="contact-page" class="container">
+  <div class="bg">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="title text-center">Empleados</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="contact-form">
+          <h2 class="title text-center">Creacion de un empleado</h2>
+          <div class="status alert alert-success" style="display: none;"></div>
+          <form
+            class="contact-form row"
+            name="contact-form"
+            method="POST"
+            (keydown.enter)="$event.preventDefault()"
+            (submit)="$event.preventDefault()"
+          >
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                name="Nombre"
+                [(ngModel)]="record.Nombre"
+                class="form-control"
+                required="required"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                name="Cedula"
+                [(ngModel)]="record.Cedula"
+                class="form-control"
+                required="required"
+                placeholder="Cedula"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                name="Departamento"
+                [(ngModel)]="record.Departamento"
+                class="form-control"
+                placeholder="Departamento"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                name="Puesto"
+                [(ngModel)]="record.Puesto"
+                class="form-control"
+                placeholder="Puesto"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                name="SalarioMensual"
+                [(ngModel)]="record.SalarioMensual"
+                class="form-control"
+                placeholder="Salario mensual"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary pull-right"
+              (click)="save()"
+            >
+              Submit
+            </button>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+</div>
