@@ -16,7 +16,7 @@ export class EmpleadoIndexComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
+    this.loadEmpleados();
   }
 
   loadEmpleados() {
