@@ -29,15 +29,15 @@
               </thead>
               <tbody *ngFor="let empleado of empleados">
                 <tr>
-                  <td>{{ product.Nombre }}</td>
-                  <td>{{ product.Cedula }}</td>
-                  <td>{{ product.Departamento }}</td>
-                  <td>{{ product.Puesto }}</td>
-                  <td>{{ product.SalarioMensual }}</td>
+                  <td>{{ empleado.Nombre }}</td>
+                  <td>{{ empleado.Cedula }}</td>
+                  <td>{{ empleado.Departamento }}</td>
+                  <td>{{ empleado.Puesto }}</td>
+                  <td>{{ empleado.SalarioMensual }}</td>
                   <td>
                     <a
                       class="btn btn-default btn-sm"
-                      [routerLink]="['/updateEmpleado', empleado.id]"
+                      [routerLink]="['/empleado/edit', empleado.id]"
                     >
                       <i class="ti-pencil" style="color: green;"></i>
                     </a>
